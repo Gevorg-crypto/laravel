@@ -13,7 +13,7 @@
 
 @include('inc.header')
 
-<div class="container mt-5">
+<div class="container col-10">
     <div class="row">
         <div class="col-8">
             @yield('content')

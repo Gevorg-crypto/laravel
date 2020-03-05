@@ -17,9 +17,12 @@ Route::get('/companies', function () {
 
 Route::get('/employees', function () {
     return view('employees');
-});
+})->name('employees');
 
 Route::get('/logout', function () {
     Auth::logout();
-    return view('welcome');
+    return redirect('/');
 });
+
+Route::post('/employee/submit', 'EmployeeController@submit')->name('employee-form');
+
