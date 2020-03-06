@@ -30,6 +30,7 @@
                 <td> {{$employee->phone}} </td>
                 <td><a href="{{ url('/employee/'."{$employee->id}")}}" ><button class="btn btn-warning">rename</button></a></td>
                 <form action="{{ url('/employee/'."{$employee->id}".'/delete')}}" method="post">
+                    @csrf
                 <td><button type="submit" class="btn btn-danger">delete</button></td>
                 </form>
             </tr>

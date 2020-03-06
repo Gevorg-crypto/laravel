@@ -38,7 +38,7 @@ class EmployeeController extends Controller
     }
 
         public function delete($id){
-        Employee::find($id)->delete()->save();
+        Employee::find($id)->delete();
         return redirect()->route('employees');
     }
 
