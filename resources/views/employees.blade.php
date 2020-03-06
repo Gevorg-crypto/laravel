@@ -15,7 +15,7 @@
             <th scope="col">Company</th>
             <th scope="col">Email</th>
             <th scope="col">Phone</th>
-            <th scope="col">rename</th>
+            <th scope="col">Rename</th>
             <th scope="col">Delete</th>
         </tr>
         </thead>
@@ -49,6 +49,13 @@
             </form>
         </tbody>
     </table>
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
 
     @if($errors->any())
         <div class="alert alert-danger">
