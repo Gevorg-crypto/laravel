@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e379c916-6016-40d1-a8dd-c1da397e5779" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/companies.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/companies.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/employees.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/employees.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/mainapp.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/mainapp.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -157,7 +156,9 @@
       <updated>1583315544521</updated>
       <workItem from="1583315548486" duration="5049000" />
       <workItem from="1583386868494" duration="5502000" />
-      <workItem from="1583396250965" duration="9367000" />
+      <workItem from="1583396250965" duration="9701000" />
+      <workItem from="1583473154140" duration="7828000" />
+      <workItem from="1583483195164" duration="5548000" />
     </task>
     <servers />
   </component>
@@ -181,17 +182,34 @@
       <screen x="0" y="23" width="1440" height="805" />
     </state>
     <state width="1398" height="188" key="GridCell.Tab.0.right/0.23.1440.805@0.23.1440.805" timestamp="1583396573035" />
-    <state x="538" y="352" key="NewPhpFileDialog" timestamp="1583392038031">
+    <state x="538" y="352" key="NewPhpFileDialog" timestamp="1583478108731">
       <screen x="0" y="23" width="1440" height="805" />
     </state>
-    <state x="538" y="352" key="NewPhpFileDialog/0.23.1440.805@0.23.1440.805" timestamp="1583392038031" />
-    <state x="380" y="258" key="com.intellij.ide.util.TipDialog" timestamp="1583396251383">
-      <screen x="0" y="23" width="1440" height="805" />
+    <state x="538" y="352" key="NewPhpFileDialog/0.23.1440.805@0.23.1440.805" timestamp="1583478108731" />
+    <state x="380" y="259" key="com.intellij.ide.util.TipDialog" timestamp="1583483371221">
+      <screen x="0" y="23" width="1440" height="810" />
     </state>
-    <state x="380" y="258" key="com.intellij.ide.util.TipDialog/0.23.1440.805@0.23.1440.805" timestamp="1583396251383" />
+    <state x="380" y="258" key="com.intellij.ide.util.TipDialog/0.23.1440.805@0.23.1440.805" timestamp="1583473160341" />
+    <state x="380" y="259" key="com.intellij.ide.util.TipDialog/0.23.1440.810@0.23.1440.810" timestamp="1583483371221" />
     <state x="385" y="152" width="670" height="676" key="search.everywhere.popup" timestamp="1583320629668">
       <screen x="0" y="23" width="1440" height="805" />
     </state>
     <state x="385" y="152" width="670" height="676" key="search.everywhere.popup/0.23.1440.805@0.23.1440.805" timestamp="1583320629668" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/routes/web.php</url>
+          <line>10</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/routes/web.php</url>
+          <line>16</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

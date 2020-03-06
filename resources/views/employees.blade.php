@@ -6,8 +6,6 @@
 
 @section('content')
     <h1>Employees table</h1>
-    <form action="{{ route('employee-form') }}" method="post">
-        @csrf
         <table class="table">
         <thead class="thead-dark">
         <tr>
@@ -22,36 +20,22 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>tom44@mdo</td>
-            <td>+374 91 000 222</td>
-            <td><button class="btn btn-warning">rename</button></td>
-            <td><button class="btn btn-danger">delete</button></td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            <td>bob_bush@fat</td>
-            <td>+374 91 444 000</td>
-            <td><button class="btn btn-warning">rename</button></td>
-            <td><button class="btn btn-danger">delete</button></td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-            <td>ann76@twitter</td>
-            <td>@+374 91 333 111</td>
-            <td><button class="btn btn-warning">rename</button></td>
-            <td><button class="btn btn-danger">delete</button></td>
-        </tr>
+        @foreach($data as $employee)
+            <tr>
+                <th scope="row">{{$employee->id}}</th>
+                <td> {{$employee->first_name}} </td>
+                <td> {{$employee->last_name}} </td>
+                <td> {{$employee->company}} </td>
+                <td> {{$employee->email}} </td>
+                <td> {{$employee->phone}} </td>
+                <td><a href="{{ url('/employee/'."{$employee->id}")}}" ><button class="btn btn-warning">rename</button></a></td>
+                <form action="{{ url('/employee/'."{$employee->id}".'/delete')}}" method="post">
+                <td><button type="submit" class="btn btn-danger">delete</button></td>
+                </form>
+            </tr>
+        @endforeach
+        <form action="{{ route('employee-form') }}" method="post">
+            @csrf
         <tr >
             <th scope="row"><p>add fields</p></th>
             <td>First Name: <input type="text"  name="first_name"></td>
@@ -61,9 +45,9 @@
             <td>Phone: <input type="text" name="phone"></td>
             <td><button type="submit" class="btn btn-primary">send fields</button></td>
         </tr>
+            </form>
         </tbody>
     </table>
-            </form>
 
     @if($errors->any())
         <div class="alert alert-danger">
@@ -78,3 +62,6 @@
 
 
 @endsection()
+
+
+
