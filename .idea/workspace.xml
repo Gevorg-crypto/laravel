@@ -2,10 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e379c916-6016-40d1-a8dd-c1da397e5779" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CompanyController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CompanyControoler.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/CompanyRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/CompanyRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/EmployeeRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/EmployeeRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_05_072835_create_companies_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_05_072835_create_companies_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/companies.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/companies.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/employees.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/employees.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/renameEmployee.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/renameEmployee.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,6 +166,10 @@
       <workItem from="1583396250965" duration="9701000" />
       <workItem from="1583473154140" duration="7828000" />
       <workItem from="1583483195164" duration="8509000" />
+      <workItem from="1583523272575" duration="527000" />
+      <workItem from="1583524953588" duration="769000" />
+      <workItem from="1583616745416" duration="1513000" />
+      <workItem from="1583656748819" duration="9631000" />
     </task>
     <servers />
   </component>
@@ -166,6 +177,14 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="277" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1583691414797">
+      <screen x="0" y="23" width="1440" height="804" />
+    </state>
+    <state x="277" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.804@0.23.1440.804" timestamp="1583691414797" />
+    <state x="458" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1583689955812">
+      <screen x="0" y="23" width="1440" height="804" />
+    </state>
+    <state x="458" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.804@0.23.1440.804" timestamp="1583689955812" />
     <state width="1398" height="188" key="GridCell.Tab.0.bottom" timestamp="1583396573036">
       <screen x="0" y="23" width="1440" height="805" />
     </state>
@@ -182,13 +201,15 @@
       <screen x="0" y="23" width="1440" height="805" />
     </state>
     <state width="1398" height="188" key="GridCell.Tab.0.right/0.23.1440.805@0.23.1440.805" timestamp="1583396573035" />
-    <state x="538" y="352" key="NewPhpFileDialog" timestamp="1583478108731">
-      <screen x="0" y="23" width="1440" height="805" />
+    <state x="502" y="298" key="NewPhpFileDialog" timestamp="1583694482718">
+      <screen x="0" y="23" width="1440" height="804" />
     </state>
+    <state x="502" y="298" key="NewPhpFileDialog/0.23.1440.804@0.23.1440.804" timestamp="1583694482718" />
     <state x="538" y="352" key="NewPhpFileDialog/0.23.1440.805@0.23.1440.805" timestamp="1583478108731" />
-    <state x="380" y="259" key="com.intellij.ide.util.TipDialog" timestamp="1583483371221">
-      <screen x="0" y="23" width="1440" height="810" />
+    <state x="380" y="257" key="com.intellij.ide.util.TipDialog" timestamp="1583656749129">
+      <screen x="0" y="23" width="1440" height="804" />
     </state>
+    <state x="380" y="257" key="com.intellij.ide.util.TipDialog/0.23.1440.804@0.23.1440.804" timestamp="1583656749129" />
     <state x="380" y="258" key="com.intellij.ide.util.TipDialog/0.23.1440.805@0.23.1440.805" timestamp="1583473160341" />
     <state x="380" y="259" key="com.intellij.ide.util.TipDialog/0.23.1440.810@0.23.1440.810" timestamp="1583483371221" />
     <state x="368" y="39" width="703" height="777" key="find.popup" timestamp="1583492243444">
@@ -199,21 +220,5 @@
       <screen x="0" y="23" width="1440" height="805" />
     </state>
     <state x="385" y="152" width="670" height="676" key="search.everywhere.popup/0.23.1440.805@0.23.1440.805" timestamp="1583320629668" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/routes/web.php</url>
-          <line>10</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/routes/web.php</url>
-          <line>16</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -1,11 +1,11 @@
 @extends('layouts.mainapp')
 
 @section('title-block')
-    rename employees
+    rename employee
 @endsection()
 
 @section('content')
-    <h1>Employees table with <span style="color: darkred"> {{$data->id}} </span> id</h1>
+    <h1>Employee table with <span style="color: darkred"> {{$data->id}} </span> id</h1>
     <form action="{{ route('employee-update', $data->id) }}" method="post">
         @csrf
         <table class="table">

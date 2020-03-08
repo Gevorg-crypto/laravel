@@ -28,7 +28,6 @@ class EmployeeRequest extends FormRequest
             'last_name'=>'required',
             'company'=>'required|min:2|max:20',
             'email'=>'required|email',
-//            'phone'=>'required|numeric|phone_number|size:11'
             'phone'=>'required'
         ];
     }

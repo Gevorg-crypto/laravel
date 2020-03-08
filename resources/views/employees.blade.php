@@ -9,7 +9,7 @@
         <table class="table">
         <thead class="thead-dark">
         <tr>
-            <th scope="col">#</th>
+            <th scope="col">id</th>
             <th scope="col">First name</th>
             <th scope="col">last name</th>
             <th scope="col">Company</th>
@@ -49,12 +49,9 @@
             </form>
         </tbody>
     </table>
+
             <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+       {{ $data->links() }}
             </ul>
 
     @if($errors->any())

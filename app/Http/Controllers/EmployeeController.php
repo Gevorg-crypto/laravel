@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Http\Requests\EmployeeRequest;
 use App\Models\Employee;
-
+use Illuminate\Support\Facades\DB;
 
 class EmployeeController extends Controller
 {
@@ -18,7 +18,8 @@ class EmployeeController extends Controller
        return redirect()->route('employees');
    }
     public function getData(){
-        return view('employees', ['data'=>Employee::all()]);
+        $employee= new Employee();
+        return view('employees', ['data'=> DB::table('employees')->paginate(10)]);
     }
 
     public function rename($id){

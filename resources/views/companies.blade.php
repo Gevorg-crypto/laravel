@@ -30,33 +30,47 @@
             <td><button class="btn btn-warning">rename</button></td>
             <td><button class="btn btn-danger">delete</button></td>
         </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td><img src="https://i.pinimg.com/originals/33/b8/69/33b869f90619e81763dbf1fccc896d8d.jpg" alt="Smiley face" height="42" width="42">
-            <td>bob_bush@fat</td>
-            <td><button class="btn btn-warning">rename</button></td>
-            <td><button class="btn btn-danger">delete</button></td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td><img src="https://cdn.shopify.com/shopifycloud/hatchful-web/assets/6fcc76cfd1c59f44d43a485167fb3139.png" alt="Smiley face" height="42" width="42">
-            <td>ann76@twitter</td>
-            <td><button class="btn btn-warning">rename</button></td>
-            <td><button class="btn btn-danger">delete</button></td>
-        </tr>
+        @foreach($data as $company)
+            <tr>
+                <th scope="row">{{$company->id}}</th>
+                <td> {{$company->name}} </td>
+                <td> {{$company->email}} </td>
+                <td> <img src="{{$company->logo}}"  height="42" width="42"> </td>
+                <td> {{$company->company}} </td>
+                <td> {{$company->website}} </td>
+                <td><a href="{{ url('/company/'."{$company->id}")}}" ><button class="btn btn-warning">rename</button></a></td>
+                <form action="{{ url('/company/'."{$company->id}".'/delete')}}" method="post">
+                    @csrf
+                    <td><button type="submit" class="btn btn-danger">delete</button></td>
+                </form>
+            </tr>
+        @endforeach
+        <form action="{{ route('company-form') }}" method="post">
+            @csrf
         <tr>
             <th scope="row"><p>add fields</p></th>
-            <td>Name: <input type="text"></td>
-            <td>Email: <input type="text"></td>
-            <td>Logo: <input type="file"></td>
-            <td>Website: <input type="text"></td>
+            <td>Name: <input type="text" name="name"></td>
+            <td>Email: <input type="text" name="email"></td>
+            <td>Logo: <input type="file" name="logo"></td>
+            <td>Website: <input type="text" name="website"></td>
             <td><button class="btn btn-primary">send fields</button></td>
         </tr>
+        </form>
         </tbody>
     </table>
+    <ul class="pagination">
+        {{ $data->links() }}
+    </ul>
+
+    @if($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach($errors->all() as $error)
+                    <li>{{$error}}<li>
+                @endforeach()
+
+            </ul>
+        </div>
+    @endif
 
 @endsection()
